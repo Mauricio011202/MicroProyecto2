@@ -17,6 +17,9 @@ export function Navbar(){
             <nav className={styles.navbar}>
                 <ul className={styles.navList}>
                     <li>
+                        <Link className={styles.Link} to={"/"}><span>Home</span></Link>
+                    </li>
+                    <li>
                         <Link className={styles.Link} to={"/Busqueda"}><span>Busqueda</span></Link>
                     </li>
                     <li>
