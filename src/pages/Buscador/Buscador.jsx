@@ -2,43 +2,42 @@
 import { getJuegos } from "../../Firebase/videoJuegos"
 import styles from "../Buscador/Buscador.module.css"
 import React, { useState } from 'react'
+import Juego from "../../components/Juegos/Juego"
 
 export  function Buscador() {
-  const [juego, setjuego] = useState()
+  const muestra = [{
+    "ID": "1",
+    "titulo": "The Witcher 3: Wild Hunt",
+    "genero": "RPG",
+    "descripcion": "Un épico juego de rol de mundo abierto con una trama envolvente y gráficos impresionantes."
+  }
+]
+  const [juego, setjuego] = useState(null)
+  const [juegos, setjuegos] = useState(muestra)
   const onClick = async () => {
-      const juegos = await getJuegos(juego);
-      console.log(juegos)
+      const result = await getJuegos(juego);
+      console.log(result)
+      setjuegos(result)
       
-
   }
 
   const handleOnChange = (event) => {
       setjuego(event.target.value)
   }
-  const MostrarJuegos = ({ juegos }) => {
-    if (juegos.length == 0) {
-      return <p>No hay juegos disponibles</p>;
-    }
 
-    return (
-      <div>
-        {juegos.map((juego) => (
-          <div key={juego.id}>
-            <h3>{juego.titulo}</h3>
-            <p>Género: {juego.genero}</p>
-            <p>Descripción: {juego.descripcion}</p>
-          </div>
-        ))}
-      </div>
-    );
-  };
 
 
   return (
-    <div className={styles.container}>
-      <input  className={styles.bard} type="text" placeholder='Ingrese el nombre del juego' onChange={handleOnChange} />
-      <button className={styles.boton} onClick={onClick}>Buscar</button>
-      <div>{MostrarJuegos}</div>
+    <div>
+      <div className={styles.container}>
+        <input  className={styles.bard} type="text" placeholder='Ingrese el nombre del juego' onChange={handleOnChange} />
+        <button className={styles.boton} onClick={onClick}>Buscar</button>
+      </div>
+      <section>
+        {juegos.map((juego) => (
+          <Juego juego={juego} key={juego.ID} />
+        ))}
+        </section>
       
     </div>
   )
