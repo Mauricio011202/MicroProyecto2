@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import styles from "./IniciarSesion.module.css"
 import { loginWithEmailAndPassword , singInWithGoogle} from '../../Firebase/auth';
-import { Link , Navigate} from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
 
 export  function IniciarSesion() {
-  
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -14,7 +14,7 @@ export  function IniciarSesion() {
   const onSubmit = async (event) => {
     event.preventDefault();
     const {email, password}= formData;
-    Navigate("/PerfilUsuario")
+    navigate("/")
     await loginWithEmailAndPassword(email,password)
     
   };
@@ -29,6 +29,7 @@ export  function IniciarSesion() {
 
   const handleSingWithGoogle = async () => {
     await singInWithGoogle()
+    navigate("/")
   }
   return (
     <div className={styles.container}>

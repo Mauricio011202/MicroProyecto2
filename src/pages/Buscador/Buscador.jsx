@@ -14,9 +14,9 @@ export  function Buscador() {
 ]
   const [juego, setjuego] = useState(null)
   const [juegos, setjuegos] = useState(muestra)
+  
   const onClick = async () => {
       const result = await getJuegos(juego);
-      console.log(result)
       setjuegos(result)
       
   }
@@ -34,7 +34,8 @@ export  function Buscador() {
         <button className={styles.boton} onClick={onClick}>Buscar</button>
       </div>
       <section>
-        {juegos.map((juego) => (
+        {
+        juegos.map((juego) => (
           <Juego juego={juego} key={juego.ID} />
         ))}
         </section>

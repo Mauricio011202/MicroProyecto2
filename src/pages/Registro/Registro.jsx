@@ -29,7 +29,7 @@ export  function Registro() {
     event.preventDefault();
     const {email, password, ...extraData} = formData;
     await registerWithEmailAndPassword(formData.email, formData.password, extraData)
-    navigate('/PerfilUsuario')
+    navigate('/')
   };
 
 
