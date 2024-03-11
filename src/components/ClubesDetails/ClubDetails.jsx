@@ -37,7 +37,10 @@ export function ClubDetails(){
         </section> */}
             <div> está aqui - ${ID} </div>
             <h3>{clubes.nombre}</h3>
+
             <p>Descripcion: {ID}</p>
+
+            <button> Subscribirme</button>
 
         </div>
     )
