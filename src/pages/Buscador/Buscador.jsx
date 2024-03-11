@@ -1,7 +1,7 @@
 
 import { getJuegos } from "../../Firebase/videoJuegos"
 import styles from "../Buscador/Buscador.module.css"
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import Juego from "../../components/Juegos/Juego"
 
 export  function Buscador() {

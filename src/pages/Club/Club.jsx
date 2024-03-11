@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import {getClub} from "../../Firebase/clubes"
+import Clubes from "../../components/Clubes/ClubeDetails"
+import { useParams } from 'react-router-dom';
 
 export  function Club() {
-  return (
-    <div>Club</div>
-  )
+
+< div>Club</div>
 }

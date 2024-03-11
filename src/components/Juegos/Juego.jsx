@@ -1,6 +1,6 @@
 import styles from "./Juego.module.css"
 
-function Juego({juego}){
+export function Juego({juego}){
     return(
         <div className={styles.container}>
           <h3>{juego.titulo}</h3>

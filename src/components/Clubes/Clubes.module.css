@@ -1,0 +1,19 @@
+.bloque {
+    display: flexbox;
+    color: white;
+    width: 650px;
+    border-radius: 18px;
+    background-color: rgb(78, 88, 163);
+    flex-direction: column;
+    margin: 20px 30%;
+    padding: 10px;
+}
+
+.nameredirect{
+
+    display: flex;
+    color: blue;
+    text-decoration: none;
+
+
+}
