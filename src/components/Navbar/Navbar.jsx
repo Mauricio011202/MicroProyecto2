@@ -12,7 +12,7 @@ export function Navbar(){
     return(
         <header>
             <div>
-                <img  src="./src/assets/logo.png" alt="Logo pagina" />
+                <img className={styles.imagen} src="./public/huesos.png" alt="Logo pagina" />
             </div>
             <nav className={styles.navbar}>
                 <ul className={styles.navList}>
@@ -31,7 +31,7 @@ export function Navbar(){
                                 <Link className={styles.Link} to={"/PerfilUsuario"} ><span>Perfil - {user.name}</span></Link>
                             </li>
                             <li>
-                                <button type="button" onClick={handleLogout}>Salir</button>
+                                <button className={styles.boton} type="button" onClick={handleLogout}>Salir</button>
                             </li>
                         </>
                     )}

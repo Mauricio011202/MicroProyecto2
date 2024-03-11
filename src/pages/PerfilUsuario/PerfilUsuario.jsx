@@ -42,7 +42,8 @@ export  function PerfilUsuario() {
     name: '',
     email: '',
     userName: '',
-    fav: ''
+    fav: '',
+    membresias: user.membresias
   });
 
   const handleOnChange = async (event) => {
@@ -91,7 +92,7 @@ export  function PerfilUsuario() {
                             
                           <div className={styles.container}>
           <form className={styles.form} onSubmit={onSubmit}>
-            <h1 className={styles.title}>Actualizar cuenta</h1>
+            <h1 className={styles.title}>Actualizar Información de la Cuenta</h1>
             
     
             {/* NAME FIELD */}
@@ -118,7 +119,7 @@ export  function PerfilUsuario() {
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Eg. john@email.com"
+                placeholder="Eg. ejemplo@email.com"
                 onChange={handleOnChange}
                
               />
@@ -133,7 +134,7 @@ export  function PerfilUsuario() {
                 type="text"
                 name="userName"
                 id="userName"
-                placeholder="Jon231"
+                placeholder="Diego22"
                 onChange={handleOnChange}
                 
               />
@@ -147,7 +148,7 @@ export  function PerfilUsuario() {
                 type="text"
                 name="fav"
                 id="fav"
-                placeholder="Jon231"
+                placeholder="1"
                 onChange={handleOnChange}
                 
               />
