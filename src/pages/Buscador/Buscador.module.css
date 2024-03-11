@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    
+}
+
+.bard {
+    padding: 8px;
+    border-radius: 12px;
+    height: 30px;
+    width: 400px;
+}
+
+.boton {
+    height: 30px;
+}
+

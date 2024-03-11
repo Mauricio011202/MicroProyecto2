@@ -1,14 +1,17 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { Outlet } from "react-router-dom";
+import { UserContextProvider } from "../../contexts/UserContex";
 
 export function Layout() {
   return (
     <main>
-        
-        <Navbar/>
-        <section className="body">
+        <UserContextProvider>
+          <Navbar/>
+          <section className="body">
             <Outlet />
-        </section>
+          </section>
+        </UserContextProvider>
+        
         
 
     </main>

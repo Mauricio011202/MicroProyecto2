@@ -8,6 +8,9 @@ import { Club } from './pages/Club/Club.jsx';
 import {Navbar} from "./components/Navbar/Navbar.jsx"
 import {Layout} from "./pages/Layout/Layout.jsx"
 import './index.css'
+import { Registro } from './pages/Registro/Registro.jsx';
+import { PerfilUsuario } from './pages/PerfilUsuario/PerfilUsuario.jsx';
+import { PrivateRoute } from './components/PrivateRoute/PrivateRoute.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -16,9 +19,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route element={<Layout />}>
           <Route path='/' element={<Home/>}/>
           <Route path='/IniciarSesion' element={<IniciarSesion />}/>
-          <Route path='/Registro' element={<IniciarSesion />}/>
-          <Route path='/Busqueda' element={<Buscador />}/>
-          <Route path='/Club' element={<Club />}/>
+          <Route path='/Registro' element={<Registro />}/>
+          <Route path='/Busqueda' element={
+          <PrivateRoute>
+            <Buscador/>
+          </PrivateRoute>
+          }/>
+          <Route path='/Club' element={
+          <PrivateRoute>
+            <Club />
+          </PrivateRoute>
+          }/>
+          <Route path='/PerfilUsuario' element={
+          <PrivateRoute>
+            <PerfilUsuario />
+          </PrivateRoute>
+          }/>
         </Route> 
       </Routes>
     </BrowserRouter>
