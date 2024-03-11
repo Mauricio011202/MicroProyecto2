@@ -6,7 +6,7 @@ export const singInWithGoogle = async () => {
     
     try{
         const result = await signInWithPopup(auth, googleProvider);
-        await creatUserProfile(result.user.uid,{email:result.user.email, name: result.user.displayName})
+        await creatUserProfile(result.user.uid,{email:result.user.email, name: result.user.displayName, userName: '', fav: '', membresias: []})
     } catch (error){
 
     }

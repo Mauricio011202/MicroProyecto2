@@ -10,7 +10,10 @@ export  function Registro() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    userName: '',
+    fav: '',
+    membresias: []
   });
 
   const handleSingWithGoogle = async () => {

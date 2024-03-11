@@ -42,7 +42,8 @@ export  function PerfilUsuario() {
     name: '',
     email: '',
     userName: '',
-    fav: ''
+    fav: '',
+    membresias: user.membresias
   });
 
   const handleOnChange = async (event) => {
