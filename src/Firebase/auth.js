@@ -11,7 +11,7 @@ export const singInWithGoogle = async () => {
 
     }
 }
-
+//soy un comentario
 export const registerWithEmailAndPassword = async (email, password, extraData) => {
     try{
         const result = await createUserWithEmailAndPassword(auth, email, password )
