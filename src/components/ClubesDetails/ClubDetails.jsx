@@ -7,17 +7,21 @@ export function ClubDetails(){
 
     const{ID}= useParams();
 
+
     const [clubes, setClubes]= useState([{
         "nombre": "Club de Aventureros",
-      },
+      }
     ]);
 
-    // async function getClub(){
-    //     const club =await getoneClub(ID)
-    //     console.log(club);
-    //     setClubes(club);
-    //   }
-    //   getClub()
+    useEffect(()=>{
+        async function getClub(){
+                   const club =await getoneClub(parseInt(ID))
+                   setClubes(club);
+                 }
+                 getClub()
+      },[]);
+
+    // 
 
     // useEffect(()=>{
 
@@ -32,13 +36,10 @@ export function ClubDetails(){
     return(
 
         <div>
-            {/* <section>
-        <Clubes clubes={clubes} key={clubes.ID} />
-        </section> */}
-            <div> está aqui - ${ID} </div>
-            <h3>{clubes.nombre}</h3>
-
-            <p>Descripcion: {ID}</p>
+            
+            
+            <Clubes clubes={clubes[0]}/>
+            {}
 
             <button> Subscribirme</button>
 

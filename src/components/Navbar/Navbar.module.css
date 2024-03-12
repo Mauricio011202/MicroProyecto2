@@ -1,10 +1,7 @@
 
 header {
-<<<<<<< HEAD
     background-color: rgb(128, 136, 201);
-=======
-    background-color: rgb(21, 21, 91);
->>>>>>> de72a979804e30a59891c55d5e001154fe5299bb
+
     display: flex;
     justify-content: space-between;
     align-items: center;
