@@ -25,7 +25,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Buscador/>
           </PrivateRoute>
           }/>
-          <Route path='/:ID' element={<ClubDetails />}/>
+          <Route path='/:ID' element={
+          <PrivateRoute>
+            <ClubDetails />
+          </PrivateRoute>
+          }/>
           <Route path='/PerfilUsuario' element={
           <PrivateRoute>
             <PerfilUsuario />
