@@ -1,7 +1,10 @@
-.title {
+.Title {
+    display: flex;
+    justify-content: center;
     padding: 8px;
     color: rgb(231, 160, 246);
     border-radius: 12px;
+<<<<<<< HEAD
     height: 30px;
     width: 400px;
     text-align: center;
@@ -11,4 +14,7 @@
 text-decoration: none;
 
 
+=======
+        
+>>>>>>> 80bba17f5289c13f31cf72f974ab865792f5fdb1
 }

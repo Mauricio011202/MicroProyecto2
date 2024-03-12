@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useUser } from "../../contexts/UserContex"
 import { useEffect,useState } from "react";
 import { getoneClub } from "../../Firebase/clubes";
+import Juego from "../../components/Juegos/Juego"
 import Clubes from "../../components/Clubes/Clubes"
 import styles from "./ClubDetails.module.css"
 import Juego from "../Juegos/Juego";
@@ -67,22 +68,10 @@ export function ClubDetails(){
             
             
             <Clubes clubes={clubes[0]}/>
-            {/* <section>
-            {
-        //         clubes[0].videojuegos.map((id) => (
-                    
-        //             // async function getJuego(){
-        //             //     const juego =await getoneGame(parseInt(ID))
-        //             //     setJuego(juego)
-        //             //  }
-        //             //   getJuego();
-        // //    
-        // //             <Juego juego={juego} key {juego.ID}/>
+            {}
 
-        //         ))}
-            </section> */}
+            <button> Subscribirme</button>
 
-            <button className="style.boton" onClick={onClick}> Subscribirme</button>
         </div>
     )
 

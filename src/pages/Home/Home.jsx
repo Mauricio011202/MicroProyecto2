@@ -26,8 +26,15 @@ export  function Home() {
     
   return (
     <div>
+<<<<<<< HEAD
     
      <h1 className={styles.title}> Welcome to Planet Games </h1>
+=======
+      <div className={styles.Title}>
+        <h1 > Welcome to Planet Games </h1>
+      </div>
+     
+>>>>>>> 80bba17f5289c13f31cf72f974ab865792f5fdb1
      <section>
         {clubes.map((club) => (
           <Link className= {styles.link}to={`${club.ID}`} key={club.ID}>
