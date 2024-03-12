@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect,useState } from "react";
 import { getoneClub } from "../../Firebase/clubes";
+import Juego from "../../components/Juegos/Juego"
 import Clubes from "../../components/Clubes/Clubes"
 
 export function ClubDetails(){
@@ -39,7 +40,13 @@ export function ClubDetails(){
             
             
             <Clubes clubes={clubes[0]}/>
-            {}
+            {/* <section>
+        {
+        clubes[0].videojuegos.map((id) => (
+
+          <Juego juego={juego} key={juego.ID} />
+        ))}
+        </section> */}
 
             <button> Subscribirme</button>
 

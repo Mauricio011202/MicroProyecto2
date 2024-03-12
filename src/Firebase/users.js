@@ -3,7 +3,7 @@ import { db } from "./Firebase"
 
 export async function creatUserProfile(userId, data){
     return setDoc(doc(db, "usuarios",userId), data);
-}
+} 
 
 export async function getUserProfile(email){
     const userQuery = query(collection(db, "usuarios"), where("email","==",email));

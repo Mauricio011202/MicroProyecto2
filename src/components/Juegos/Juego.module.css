@@ -15,3 +15,40 @@
 h3 {
     color: rgba(166, 212, 159, 0.873);
 }
+
+@media only screen and (max-width:750px) {
+    
+    .container {
+        display: flex;
+        color: white;
+        width: 380px;
+        border-radius: 16px;
+        background-color: rgb(21, 21, 91);
+        flex-direction: column;
+        margin: 20px;
+        padding: 10px;
+    }
+    
+    
+    .Link {
+        font-size: 12px;
+    }
+    .boton {
+        padding: 4px 8px;
+        height: 30px;
+        font-size: 8px;
+    }
+    .imagen{
+        width: 20px;
+        height: 20px;
+
+    }
+    .navList li{
+        display: inline-block;
+        padding:  15px;
+    }
+    .bard{
+        height: 35px;
+        width: 200px;
+    }
+}

@@ -22,9 +22,6 @@ export function Navbar(){
                     <li>
                         <Link className={styles.Link} to={"/Busqueda"}><span>Busqueda</span></Link>
                     </li>
-                    <li>
-                    <Link className={styles.Link} to={"/Club"}><span>Club</span></Link>
-                    </li>
                     {!!user &&(
                         <>
                             <li>
