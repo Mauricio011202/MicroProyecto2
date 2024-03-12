@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {getClubes} from "../../Firebase/clubes"
 import Clubes from "../../components/Clubes/Clubes"
 import { Link } from 'react-router-dom';
+import styles from "./Home.module.css"
 
 export  function Home() {
 
@@ -26,10 +27,10 @@ export  function Home() {
   return (
     <div>
     
-     <h1 className='styles.Title'> Welcome to Planet Games </h1>
+     <h1 className={styles.title}> Welcome to Planet Games </h1>
      <section>
         {clubes.map((club) => (
-          <Link to={`${club.ID}`} key={club.ID}>
+          <Link className= {styles.link}to={`${club.ID}`} key={club.ID}>
           <Clubes clubes={club} key={club.ID} />
           </Link>
         ))}

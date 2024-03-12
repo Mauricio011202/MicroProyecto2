@@ -34,3 +34,19 @@ export async function getAllJuegos() {
         return null;
     }
 }
+
+export async function getoneGame(ID){
+    const userQuery = query(collection(db, "juegos"), where("ID","==",ID));
+
+    const result = await getDocs(userQuery);
+
+    if (result.size > 0){
+        const juego = result.docs.map((item) =>({
+            ...item.data(),
+            id: item.id,
+        }));
+        return juego;
+    } else {
+        return null;
+    }
+}
